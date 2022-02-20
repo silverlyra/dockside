@@ -1,7 +1,7 @@
 dockside
 ========
 
-[![Build and test status](https://github.com/silverlyra/dockside/workflows/ci.yml/badge.svg)](https://github.com/silverlyra/dockside/actions/workflows/ci.yml) [![NPM package](https://img.shields.io/npm/v/lerna.svg?style=flat)](https://npm.im/dockside)
+[![Build and test status](https://github.com/silverlyra/dockside/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/silverlyra/dockside/actions/workflows/ci.yml?query=branch%3Amain) [![NPM package](https://img.shields.io/npm/v/dockside.svg?style=flat)](https://npm.im/dockside)
 
 Dockside is a client for the [Docker Registry API][api].
 
