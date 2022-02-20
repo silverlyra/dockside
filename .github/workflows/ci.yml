@@ -1,0 +1,27 @@
+name: Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    name: Build, lint, and test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        nodejs: [14, 16]
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.nodejs }}
+          cache: yarn
+
+      - run: yarn install
+      - run: yarn test
+      - run: yarn lint
+      - run: yarn build
