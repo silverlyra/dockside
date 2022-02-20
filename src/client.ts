@@ -24,6 +24,7 @@ export class Client {
   public async get(spec: string | Reference): Promise<Manifest | Index> {
     const ref = typeof spec === 'string' ? Reference.parse(spec) : spec
     const res = await this.resolve(ref)
+    if (res.status !== 200) throw new ResponseError(`Failed to fetch ${ref}`, res)
     return res.json()
   }
 
@@ -55,8 +56,7 @@ export class Client {
 
     const response = await this.getBlob(ref.repository, manifest.config.digest)
     if (response.status !== 200) {
-      console.error(await response.text())
-      process.exit(1)
+      throw new ResponseError(`Failed to get config blob ${ref}`, response)
     }
     return response.json()
   }

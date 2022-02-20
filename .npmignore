@@ -2,3 +2,11 @@
 /.vscode/
 /node_modules/
 /docs/
+
+/.editorconfig
+/.esbuild.cjs
+/.eslintrc.cjs
+/.gitignore
+/.prettierrc.cjs
+/jest.config.cjs
+/tsconfig.json

@@ -158,8 +158,6 @@ export class AuthenticatedFetcher {
       req.headers.set('Authorization', auth)
     }
 
-    console.error(req.method, req.url, auth != null)
-
     const res = await this.impl(req)
     if (res.status !== 200) {
       throw new ResponseError(`Failed to acquire bearer token: HTTP ${res.status}`, res)

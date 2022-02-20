@@ -1,6 +1,6 @@
 {
   "name": "dockside",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Docker Registry v2 API client",
   "author": "Lyra Naeseth <lyra@lyra.codes>",
   "license": "MIT",
@@ -43,5 +43,8 @@
     "ts-jest": "^27.1.3",
     "typedoc": "^0.22.11",
     "typescript": "^4.5.5"
-  }
+  },
+  "keywords": [
+    "docker"
+  ]
 }
